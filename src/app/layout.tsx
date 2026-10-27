@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Schibsted_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { profile } from "@/content/site";
+import { profile, sections } from "@/content/site";
+import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
 
 const schibsted = Schibsted_Grotesk({
@@ -33,8 +35,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fafaf8" },
-    { media: "(prefers-color-scheme: dark)", color: "#1d1e21" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f0f11" },
   ],
 };
 
@@ -48,7 +50,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
+        <SiteNav name={profile.name} sections={sections} resumeHref="/resume" />
         {children}
+        <SiteFooter />
         <Analytics />
       </body>
     </html>

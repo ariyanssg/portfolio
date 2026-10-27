@@ -2,58 +2,65 @@
   --text-xs: 0.8125rem;
   --text-sm: 0.9375rem;
   --text-md: 1.0625rem;
-  --text-lg: 1.125rem;
+  --text-lg: 1.1875rem;
   --text-xl: 1.375rem;
   --text-2xl: 1.75rem;
   --text-3xl: 2.25rem;
-  --text-display: clamp(2.75rem, 3.2vw + 1.6rem, 4rem);
-  --text-section: clamp(1.875rem, 1.4vw + 1.4rem, 2.625rem);
-  --text-title: clamp(1.3125rem, 0.5vw + 1.15rem, 1.625rem);
-  --text-lead: clamp(1.125rem, 0.35vw + 1.05rem, 1.25rem);
+  --text-hero: clamp(3rem, 5.2vw + 1.2rem, 5.5rem);
+  --text-display: clamp(2.5rem, 3.4vw + 1.3rem, 4.25rem);
+  --text-section: clamp(2rem, 2.4vw + 1.2rem, 3.5rem);
+  --text-title: clamp(1.5rem, 1vw + 1.2rem, 2.125rem);
+  --text-lead: clamp(1.1875rem, 0.5vw + 1.05rem, 1.4375rem);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --color-error: oklch(52% 0.19 27);
-  --color-success: oklch(50% 0.12 150);
+  --color-error: #c4262e;
+  --color-success: #1d7a3e;
 
-  /* Light: daylight paper and graphite ink, one amber signal. */
-  --color-paper: oklch(98.6% 0.003 85);
-  --color-paper-2: oklch(96.2% 0.004 85);
-  --color-paper-3: oklch(92.6% 0.005 85);
-  --color-ink: oklch(21% 0.008 260);
-  --color-ink-2: oklch(36% 0.008 260);
-  --color-muted: oklch(49% 0.01 260);
-  --color-rule: oklch(89.5% 0.004 85);
-  --color-accent: oklch(80% 0.145 72);
-  --color-accent-ink: oklch(21% 0.03 65);
-  --color-accent-line: oklch(55% 0.13 66);
-  --color-focus: oklch(55% 0.13 66);
+  /* Light: white page, grey tiles, near-black ink, one amber for primary actions. */
+  --color-paper: #ffffff;
+  --color-paper-2: #f5f5f7;
+  --color-paper-3: #e8e8ed;
+  --color-ink: #1d1d1f;
+  --color-ink-2: #424245;
+  --color-muted: #6e6e73;
+  --color-rule: #d2d2d7;
+  --color-accent: #f5a524;
+  --color-accent-ink: #1d1d1f;
+  --color-accent-line: #a8590a;
+  --color-focus: #a8590a;
 
+  /* Display is the brand face; everything people read is the system face. */
   --font-display: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
-  --font-body: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-code: ui-monospace, SFMono-Regular, Menlo, monospace;
-  --radius-card: 12px;
-  --radius-control: 8px;
-  --shadow-card: 0 1px 2px oklch(21% 0.008 260 / 0.06), 0 8px 24px -12px oklch(21% 0.008 260 / 0.18);
+  --radius-tile: 28px;
+  --radius-card: 18px;
+  --radius-control: 12px;
   --radius-capsule: 999px;
+  --shadow-card: 0 1px 2px rgb(29 29 31 / 0.04), 0 12px 32px -18px rgb(29 29 31 / 0.22);
+  --shadow-node: 0 1px 2px rgb(29 29 31 / 0.06), 0 4px 14px -6px rgb(29 29 31 / 0.12);
   --tracking-display: -0.035em;
 }
 
-/* Dark: graphite after hours, the same amber. Follows the system appearance. */
+/* Dark: graphite page, raised tiles, the same amber. Follows the system appearance. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-paper: oklch(22% 0.006 260);
-    --color-paper-2: oklch(25.5% 0.007 260);
-    --color-paper-3: oklch(30% 0.008 260);
-    --color-ink: oklch(94% 0.004 85);
-    --color-ink-2: oklch(84% 0.005 85);
-    --color-muted: oklch(71% 0.01 260);
-    --color-rule: oklch(34% 0.008 260);
-    --color-accent: oklch(80% 0.145 72);
-    --color-accent-ink: oklch(21% 0.03 65);
-    --color-accent-line: oklch(80% 0.145 72);
-    --color-focus: oklch(80% 0.145 72);
-    --shadow-card: 0 1px 2px oklch(0% 0 0 / 0.3), 0 12px 32px -16px oklch(0% 0 0 / 0.6);
+    --color-paper: #0f0f11;
+    --color-paper-2: #1c1c1e;
+    --color-paper-3: #2c2c2e;
+    --color-ink: #f5f5f7;
+    --color-ink-2: #d2d2d7;
+    --color-muted: #98989d;
+    --color-rule: #3a3a3c;
+    --color-accent: #f5a524;
+    --color-accent-ink: #1d1d1f;
+    --color-accent-line: #f5a524;
+    --color-focus: #f5a524;
+    --color-error: #ff6961;
+    --color-success: #30d158;
+    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 16px 40px -20px rgb(0 0 0 / 0.7);
+    --shadow-node: 0 1px 2px rgb(0 0 0 / 0.5), 0 6px 18px -8px rgb(0 0 0 / 0.6);
     color-scheme: dark;
   }
 }
@@ -61,13 +68,13 @@
 /* Increase Contrast: secondary text and rules step up toward the ink. */
 @media (prefers-contrast: more) {
   :root {
-    --color-muted: oklch(36% 0.008 260);
-    --color-rule: oklch(62% 0.006 85);
+    --color-muted: #48484c;
+    --color-rule: #8e8e93;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --color-muted: oklch(86% 0.006 85);
-      --color-rule: oklch(58% 0.008 260);
+      --color-muted: #d2d2d7;
+      --color-rule: #8e8e93;
     }
   }
 }
@@ -75,15 +82,15 @@
 /* Print: paper is paper, whatever the screen theme. */
 @media print {
   :root {
-    --color-paper: oklch(99.6% 0.002 85);
-    --color-paper-2: oklch(99.6% 0.002 85);
-    --color-ink: oklch(12% 0.006 260);
-    --color-ink-2: oklch(24% 0.006 260);
-    --color-muted: oklch(38% 0.008 260);
-    --color-rule: oklch(82% 0.004 85);
-    --color-accent: oklch(12% 0.006 260);
-    --color-accent-ink: oklch(99.6% 0.002 85);
-    --color-accent-line: oklch(12% 0.006 260);
+    --color-paper: #fefefe;
+    --color-paper-2: #fefefe;
+    --color-ink: #111113;
+    --color-ink-2: #2b2b2e;
+    --color-muted: #4a4a4e;
+    --color-rule: #c7c7cc;
+    --color-accent: #111113;
+    --color-accent-ink: #fefefe;
+    --color-accent-line: #111113;
     color-scheme: light;
   }
 }
@@ -101,14 +108,15 @@
   --space-4xl: 144px;
   --dur-micro: 120ms;
   --dur-short: 220ms;
-  --dur-long: 420ms;
-  --container: 1200px;
+  --dur-long: 600ms;
+  --container: 1120px;
   --gutter: 20px;
   --gap-columns: 64px;
-  --section-gap: 72px;
+  --section-gap: 96px;
+  --nav-h: 52px;
   --z-sticky-nav: 300;
   --rule-hair: 1px;
   color-scheme: light;
 }
-@media (min-width: 40rem) { :root { --gutter: 32px; --section-gap: 88px; } }
-@media (min-width: 64rem) { :root { --gutter: 48px; --section-gap: 112px; } }
+@media (min-width: 40rem) { :root { --gutter: 32px; --section-gap: 120px; } }
+@media (min-width: 64rem) { :root { --gutter: 48px; --section-gap: 160px; } }

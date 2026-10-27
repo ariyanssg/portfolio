@@ -1,11 +1,9 @@
-/* Hallmark · shape: identity column + scrolling record · genre: modern-minimal · theme: custom · job: hire · idea: "Who he is stays in view while the work scrolls past" · vibe: "calm, exact, daylight paper, one amber signal"
- * paper: oklch(98.6% 0.003 85) · accent: oklch(80% 0.145 72) · display: Schibsted Grotesk · body: Schibsted Grotesk · hero: portrait, name, one sentence and the resume action in a sticky column · nav: section links in the column, a top bar on phones · footer: one line, name and links · imagery: the product (Signal404 screenshot) and one drawn system figure · signature: Vela's architecture drawn as a real system figure
- * axes: warm-white/grotesk/amber · posture: left-anchored column · contrast: pass · fold: pass · v2.0.0 */
-/* Hallmark · pre-emit critique: P4 H4 E4 S3 R5 V4 · weakest: S, the canon layout is familiar by request; the system figure and real screenshots carry the identity instead of decoration */
-/* Hallmark · waive 77 · the right column is 55% wide beside a sticky identity column · the user chose the two-column portfolio canon; that column is the reading measure by design */
-/* Hallmark · waive 78 · h2 30px under a 56px name in the side column · section heads are sized to the reading column; the only hero head is the name, set once */
-/* Hallmark · waive 44c · the /resume hero is a 269px document header · /resume is a printable one-page resume, so it opens straight into the document */
-/* Hallmark · waive 59 · resume sections sit 30px apart · the resume follows print density so it fits one A4 page */
+/* Hallmark · shape: product line (hero, work tiles, record, closing tile) · genre: modern-minimal · theme: custom · job: hire · idea: "Each project presented like a product, with its real artifact in the tile" · vibe: "calm, exact, generous, white page and grey tiles"
+ * paper: #ffffff · accent: #f5a524 · display: Schibsted Grotesk · body: system UI (SF Pro on Apple devices) · hero: centred portrait, name, one sentence, a capsule action and a plain one · nav: one translucent global bar, a sheet menu on phones · footer: fine print on the tile grey · imagery: the product (Signal404 screenshot) and one drawn system figure · signature: Vela's architecture drawn large in its tile
+ * axes: white/grotesk/amber · posture: centred hero, left-aligned record · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H5 E4 S4 R5 V4 · weakest: P, tile grids are a current trend; every tile carries a real artifact and none nests a card */
+/* Hallmark · waive 44c · the /resume hero is a document header · /resume is a printable one-page resume, so it opens straight into the document */
+/* Hallmark · waive 59 · resume sections sit close together · the resume follows print density so it fits one A4 page */
 @import "tailwindcss";
 @import "./tokens.css";
 @import "./base.css" layer(base);
@@ -13,17 +11,17 @@
 @custom-variant dark (@media (prefers-color-scheme: dark));
 
 @layer components {
-  /* Buttons: one primary style site-wide. */
+  /* Buttons: a filled capsule for the primary action, a quiet capsule for the rest (buttons.md › Style). */
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: var(--space-xs);
     min-height: 44px;
-    padding: 0 20px;
+    padding: 0 var(--space-lg);
     border-radius: var(--radius-capsule);
     border: 1px solid transparent;
-    font-size: var(--text-sm);
+    font-size: var(--text-md);
     font-weight: 600;
     line-height: 1;
     text-decoration: none;
@@ -31,52 +29,71 @@
     cursor: pointer;
     transition: background-color var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out), transform var(--dur-micro) var(--ease-out);
   }
-  @media (min-width: 40rem) { .btn { padding-inline: var(--space-lg); } }
-  .btn:active { transform: translateY(1px); }
+  .btn:active { transform: scale(0.98); }
   .btn:disabled, .btn[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; transform: none; }
-  .btn-primary { background: var(--color-accent); color: var(--color-accent-ink); border-color: var(--color-accent-line); }
-  .btn-primary:hover { background: color-mix(in oklab, var(--color-accent) 86%, var(--color-accent-ink)); }
+  .btn-primary { background: var(--color-accent); color: var(--color-accent-ink); }
+  .btn-primary:hover { background: color-mix(in oklab, var(--color-accent) 88%, var(--color-accent-ink)); }
   .btn-secondary { background: transparent; color: var(--color-ink); border-color: var(--color-rule); }
-  .btn-secondary:hover { border-color: var(--color-muted); background: var(--color-paper-2); }
+  .btn-secondary:hover { background: var(--color-paper-2); border-color: var(--color-muted); }
+  /* Tinted: a grey capsule for secondary actions in chrome, so amber stays with the page's primary action. */
+  .btn-tinted { background: color-mix(in oklab, var(--color-ink) 7%, transparent); color: var(--color-ink); }
+  .btn-tinted:hover { background: color-mix(in oklab, var(--color-ink) 12%, transparent); }
+  .btn-sm { min-height: 32px; padding: 0 var(--space-md); font-size: var(--text-sm); }
+  @media (pointer: coarse) { .btn-sm { min-height: 44px; } }
 
-  /* Quiet text links with an underline that appears on intent. */
+  /* Text links: ink with a quiet underline that warms on intent. */
   .link {
     color: var(--color-ink);
     text-decoration-line: underline;
-    text-decoration-color: color-mix(in oklab, var(--color-ink) 30%, transparent);
+    text-decoration-color: color-mix(in oklab, var(--color-ink) 28%, transparent);
+    text-underline-offset: 0.18em;
     transition: text-decoration-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out);
   }
   .link:hover { text-decoration-color: var(--color-accent-line); }
+
+  /* Tap targets: 44pt on touch, 28pt with a fine pointer (accessibility.md › Mobility). */
+  .tap { display: inline-flex; align-items: center; min-height: 44px; }
+  @media (pointer: fine) { .tap { min-height: 28px; } }
 
   .icon-btn {
     display: inline-grid;
     place-items: center;
     width: 44px;
     height: 44px;
-    border-radius: var(--radius-control);
-    color: var(--color-ink-2);
+    border-radius: var(--radius-capsule);
+    color: var(--color-ink);
     background: transparent;
-    border: 1px solid transparent;
+    border: 0;
     cursor: pointer;
-    transition: background-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out);
+    transition: background-color var(--dur-short) var(--ease-out);
   }
-  .icon-btn:hover { background: var(--color-paper-2); color: var(--color-ink); border-color: var(--color-rule); }
+  .icon-btn:hover { background: color-mix(in oklab, var(--color-ink) 7%, transparent); }
 
-  /* Tap targets: 44pt on touch, 28pt with a fine pointer (accessibility.md › Mobility). */
-  .tap { display: inline-flex; align-items: center; min-height: 44px; }
-  @media (pointer: fine) { .tap { min-height: 28px; } }
+  /* The one floating layer: a thin material over content, solid under Reduce Transparency (materials.md). */
+  .bar {
+    background: color-mix(in oklab, var(--color-paper) 78%, transparent);
+    backdrop-filter: saturate(1.8) blur(20px);
+    -webkit-backdrop-filter: saturate(1.8) blur(20px);
+  }
+  @media (prefers-reduced-transparency: reduce) {
+    .bar { background: var(--color-paper); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  }
 
-  /* The one floating layer: a thin material that turns solid under Reduce Transparency. */
-  .bar { background: color-mix(in oklab, var(--color-paper) 82%, transparent); backdrop-filter: saturate(1.6) blur(16px); -webkit-backdrop-filter: saturate(1.6) blur(16px); }
-  @media (prefers-reduced-transparency: reduce) { .bar { background: var(--color-paper); backdrop-filter: none; -webkit-backdrop-filter: none; } }
+  /* Tiles: the content surface for each piece of work. Filled, never bordered, never nested. */
+  .tile {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-tile);
+    background: var(--color-paper-2);
+  }
 
-  .section { scroll-margin-top: 88px; }
-  @media (min-width: 64rem) { .section { scroll-margin-top: var(--space-2xl); } }
+  .section { scroll-margin-top: calc(var(--nav-h) + var(--space-lg)); }
   .section-title {
+    font-family: var(--font-display);
     font-size: var(--text-section);
     font-weight: 600;
-    letter-spacing: -0.025em;
-    line-height: 1.1;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
     color: var(--color-ink);
   }
 
@@ -86,8 +103,8 @@
   .field .hint { font-size: var(--text-xs); color: var(--color-muted); }
   .input {
     width: 100%;
-    min-height: 44px;
-    padding: var(--space-sm);
+    min-height: 48px;
+    padding: var(--space-sm) var(--space-md);
     border-radius: var(--radius-control);
     border: 1px solid var(--color-muted);
     background: var(--color-paper);
@@ -97,40 +114,43 @@
   }
   .input::placeholder { color: var(--color-muted); }
   .input:hover { border-color: var(--color-ink-2); }
-  .input:focus-visible { outline: none; border-color: var(--color-focus); box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-focus) 28%, transparent); }
+  .input:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 1px; border-color: var(--color-focus); }
   .input[aria-invalid="true"] { border-color: var(--color-error); }
   .input:disabled { opacity: 0.6; cursor: not-allowed; }
   .field .error { font-size: var(--text-xs); color: var(--color-error); }
 
   /* Long-form reading for case studies (MDX). */
-  .prose { color: var(--color-ink-2); font-size: var(--text-md); line-height: 1.7; }
+  .prose { color: var(--color-ink-2); font-size: var(--text-lg); line-height: 1.6; }
   .prose > * + * { margin-top: 1.1em; }
-  .prose h2 { margin-top: 2.4em; font-size: var(--text-xl); font-weight: 600; letter-spacing: -0.015em; color: var(--color-ink); line-height: 1.25; }
+  .prose h2 { margin-top: 2em; font-family: var(--font-display); font-size: var(--text-title); font-weight: 600; letter-spacing: -0.025em; color: var(--color-ink); line-height: 1.15; }
   .prose h3 { margin-top: 1.8em; font-size: var(--text-lg); font-weight: 600; color: var(--color-ink); }
   .prose h2 + *, .prose h3 + * { margin-top: 0.6em; }
-  .prose > p { max-width: 68ch; }
-  .prose > ul, .prose > ol { padding-left: 1.25em; max-width: 66ch; }
+  .prose > p { max-width: 58ch; }
+  .prose > ul, .prose > ol { padding-left: 1.25em; max-width: 56ch; }
   .prose > ul { list-style: disc; }
   .prose > ol { list-style: decimal; }
-  .prose > ul > li + li, .prose > ol > li + li { margin-top: 0.4em; }
+  .prose > ul > li + li, .prose > ol > li + li { margin-top: 0.45em; }
   .prose > ul > li::marker, .prose > ol > li::marker { color: var(--color-muted); }
-  .prose > figure { margin-block: 2em; }
+  .prose > figure { margin-block: 2.2em; }
   .prose strong { color: var(--color-ink); font-weight: 600; }
   .prose a { color: var(--color-ink); text-decoration-color: var(--color-accent-line); }
-  .prose code { font-family: var(--font-code); font-size: 0.9em; background: var(--color-paper-2); border: 1px solid var(--color-rule); border-radius: var(--radius-control); padding: 0.05em 0.35em; color: var(--color-ink); }
+  .prose code { font-family: var(--font-code); font-size: 0.88em; background: var(--color-paper-2); border-radius: var(--radius-control); padding: 0.1em 0.4em; color: var(--color-ink); }
 }
 
 li, dd, figcaption { text-wrap: pretty; }
 
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
-  /* The one authored moment: the identity column settles in on first load. */
+  /* The one authored moment: the hero settles in on first load. */
   .enter > * { animation: enter var(--dur-long) var(--ease-out) both; }
-  .enter > *:nth-child(2) { animation-delay: 60ms; }
-  .enter > *:nth-child(3) { animation-delay: 120ms; }
-  .enter > *:nth-child(4) { animation-delay: 180ms; }
+  .enter > *:nth-child(2) { animation-delay: 70ms; }
+  .enter > *:nth-child(3) { animation-delay: 140ms; }
+  .enter > *:nth-child(4) { animation-delay: 210ms; }
+  /* Pointer feedback on work tiles: the artifact lifts a little toward you. */
+  .tile .lift { transition: transform var(--dur-long) var(--ease-out); }
+  .tile:hover .lift { transform: translateY(-6px); }
 }
-@keyframes enter { from { opacity: 0; transform: translateY(8px); } }
+@keyframes enter { from { opacity: 0; transform: translateY(12px); } }
 
 ::-webkit-scrollbar { width: 12px; height: 12px; }
 ::-webkit-scrollbar-track { background: var(--color-paper); }
@@ -141,6 +161,6 @@ li, dd, figcaption { text-wrap: pretty; }
   @page { size: A4; margin: 14mm 16mm; }
   .no-print { display: none !important; }
   a { text-decoration: none !important; }
-  .resume-sheet { box-shadow: none !important; border: 0 !important; padding: 0 !important; }
+  .resume-sheet { box-shadow: none !important; border: 0 !important; padding: 0 !important; background: none !important; }
   .resume-sheet section { break-inside: avoid; }
 }

@@ -24,53 +24,56 @@ export default async function CaseStudy({ params }: PageProps<"/work/[slug]">) {
   const { default: Body } = await import(`@/content/work/${slug}.mdx`);
 
   return (
-    <>
-      <div className="bar sticky top-0 z-[var(--z-sticky-nav)] border-b border-rule">
-        <div className="container flex h-14 max-w-[880px] items-center justify-between gap-4">
-          <Link href="/#work" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-ink no-underline hover:underline">
-            <ArrowLeft className="size-4" aria-hidden strokeWidth={2} />
-            {profile.name}
-          </Link>
-        </div>
-      </div>
-
-      <main id="main" className="container max-w-[880px] pb-24 pt-12 sm:pt-16">
-        <header className="grid gap-5 border-b border-rule pb-10">
-          <h1 className="text-[length:var(--text-display)] font-semibold leading-[1.0] tracking-[var(--tracking-display)] text-ink">
+    <main id="main" className="pb-8">
+      <header className="container max-w-[880px] pt-10 sm:pt-16">
+        <Link href="/#work" className="tap gap-1.5 text-sm font-semibold text-muted no-underline hover:text-ink">
+          <ArrowLeft className="size-4" aria-hidden strokeWidth={2} />
+          All work
+        </Link>
+        <div className="grid gap-5 pt-6 pb-12">
+          <h1 className="font-[family-name:var(--font-display)] text-[length:var(--text-hero)] font-semibold leading-[0.98] tracking-[-0.04em] text-ink">
             {project.name}
           </h1>
-          <p className="max-w-[48ch] text-[length:var(--text-lead)] leading-relaxed text-ink-2">{project.summary}</p>
-          <dl className="mt-2 grid gap-x-8 gap-y-4 text-sm sm:grid-cols-[auto_minmax(0,1fr)_auto]">
-            <div className="grid gap-1">
-              <dt className="font-semibold text-muted">Status</dt>
-              <dd className="m-0 text-ink">{project.status}</dd>
-            </div>
-            <div className="grid gap-1">
-              <dt className="font-semibold text-muted">Built with</dt>
-              <dd className="m-0 text-ink">{project.stack.join(", ")}</dd>
-            </div>
-            <div className="grid gap-1">
-              <dt className="font-semibold text-muted">Links</dt>
-              <dd className="m-0 flex flex-wrap gap-x-4 gap-y-1">
-                {project.links.map((l) => (
-                  <a key={l.href} href={l.href} target="_blank" rel="noreferrer" className="link tap font-semibold">
-                    {l.label}
-                    <span className="visually-hidden"> (opens in a new tab)</span>
-                  </a>
-                ))}
-              </dd>
-            </div>
-          </dl>
-        </header>
+          <p className="max-w-[40ch] text-balance text-[length:var(--text-lead)] leading-snug text-ink-2">{project.summary}</p>
+        </div>
+        <dl className="grid gap-x-10 gap-y-5 border-y border-rule py-6 text-sm sm:grid-cols-[auto_minmax(0,1fr)_auto]">
+          <div className="grid gap-1">
+            <dt className="font-semibold text-muted">Status</dt>
+            <dd className="m-0 text-ink">{project.status}</dd>
+          </div>
+          <div className="grid gap-1">
+            <dt className="font-semibold text-muted">Built with</dt>
+            <dd className="m-0 text-ink">{project.stack.join(", ")}</dd>
+          </div>
+          <div className="grid gap-1">
+            <dt className="font-semibold text-muted">Links</dt>
+            <dd className="m-0 flex flex-wrap gap-x-5">
+              {project.links.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link tap font-semibold"
+                  aria-label={`${l.label} (opens in a new tab)`}
+                >
+                  {l.label}
+                </a>
+              ))}
+            </dd>
+          </div>
+        </dl>
+      </header>
 
-        <article className="prose pt-4">
+      <div className="container max-w-[880px]">
+        <article className="prose pt-6">
           <Body />
         </article>
 
-        <nav aria-label="More work" className="mt-20 grid gap-6 border-t border-rule pt-10 sm:flex sm:items-end sm:justify-between">
+        <nav aria-label="More work" className="tile mt-20 grid gap-6 p-8 sm:flex sm:items-end sm:justify-between sm:p-10">
           <div className="grid gap-1">
             <p className="text-sm font-semibold text-muted">Next case study</p>
-            <Link href={`/work/${next.slug}`} className="tap text-[length:var(--text-title)] font-semibold tracking-tight text-ink no-underline hover:underline decoration-accent-line underline-offset-4">
+            <Link href={`/work/${next.slug}`} className="tap font-[family-name:var(--font-display)] text-[length:var(--text-title)] font-semibold tracking-tight text-ink no-underline hover:underline decoration-accent-line underline-offset-4">
               {next.name}
             </Link>
           </div>
@@ -83,7 +86,7 @@ export default async function CaseStudy({ params }: PageProps<"/work/[slug]">) {
             </Link>
           </div>
         </nav>
-      </main>
-    </>
+      </div>
+    </main>
   );
 }

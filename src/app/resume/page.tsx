@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowLeft, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import { education, experience, featuredProjects, languages, moreProjects, profile, skills } from "@/content/site";
 import { PrintButton } from "@/components/print-button";
 
@@ -12,17 +11,16 @@ export const metadata: Metadata = {
 const resumeProjects = [...featuredProjects, ...moreProjects.filter((p) => p.caseStudy)];
 
 function Heading({ children }: { children: React.ReactNode }) {
-  return <h2 className="border-b border-rule pb-1.5 text-base font-semibold text-ink">{children}</h2>;
+  return <h3 className="border-b border-rule pb-1.5 text-base font-semibold text-ink">{children}</h3>;
 }
 
 export default function Resume() {
   return (
-    <main id="main" className="container max-w-[880px] py-8 sm:py-12">
+    <main id="main" className="container max-w-[880px] pt-10 sm:pt-14">
       <div className="no-print mb-8 flex flex-wrap items-center justify-between gap-3">
-        <Link href="/" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-ink no-underline hover:underline">
-          <ArrowLeft className="size-4" aria-hidden strokeWidth={2} />
-          Back to site
-        </Link>
+        <h1 className="font-[family-name:var(--font-display)] text-[length:var(--text-section)] font-semibold leading-none tracking-[-0.03em] text-ink">
+          Resume
+        </h1>
         <div className="flex flex-wrap gap-3">
           <PrintButton />
           <a href={profile.resumePdf} download className="btn btn-primary">
@@ -32,9 +30,9 @@ export default function Resume() {
         </div>
       </div>
 
-      <article className="resume-sheet grid gap-7 rounded-card border border-rule bg-paper p-6 shadow-[var(--shadow-card)] sm:p-10">
+      <article className="resume-sheet grid gap-7 rounded-[var(--radius-tile)] bg-paper p-6 shadow-[var(--shadow-card)] ring-1 ring-rule sm:p-12">
         <header className="grid gap-2">
-          <h1 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">{profile.name}</h1>
+          <h2 className="font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight text-ink sm:text-3xl">{profile.name}</h2>
           <p className="text-lg text-ink-2">{profile.role}</p>
           <ul className="flex flex-wrap gap-x-5 text-sm text-ink-2">
             <li>{profile.location}</li>
@@ -70,9 +68,9 @@ export default function Resume() {
           {experience.map((job) => (
             <div key={job.company} className="grid gap-2">
               <div className="flex flex-wrap items-baseline justify-between gap-x-4">
-                <h3 className="font-semibold text-ink">
+                <h4 className="font-semibold text-ink">
                   {job.role}, {job.company}
-                </h3>
+                </h4>
                 <p className="num text-sm text-muted">
                   {job.start} to {job.end}
                 </p>
@@ -94,7 +92,7 @@ export default function Resume() {
           <ul className="grid gap-3">
             {resumeProjects.map((p) => (
               <li key={p.slug} className="grid gap-0.5">
-                <h3 className="font-semibold text-ink">{p.name}</h3>
+                <h4 className="font-semibold text-ink">{p.name}</h4>
                 <p className="text-ink-2">{p.summary}</p>
                 <p className="text-sm text-muted">{p.stack.join(", ")}</p>
               </li>

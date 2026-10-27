@@ -156,7 +156,6 @@ export const languages = [
 export const sections = [
   { id: "work", label: "Work" },
   { id: "experience", label: "Experience" },
-  { id: "education", label: "Education" },
   { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" },
 ] as const;
