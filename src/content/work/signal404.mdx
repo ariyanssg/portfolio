@@ -1,0 +1,26 @@
+## The problem
+
+Restaurant websites change constantly: menus move, branches close, booking providers come and go. Google keeps showing the old pages, and guests land on errors. Many of those errors are **soft 404s**: the server says everything is fine, but the page is empty or a "not found" message. Ordinary link checkers miss them. Meanwhile the Google Business Profile often shows a phone number, hours or booking link that no longer match the website.
+
+## What it does
+
+<Signal404Figure />
+
+Signal404 runs three checks, separately or together:
+
+- **Find broken pages.** It discovers a site's URLs from Google search results, sitemaps, a rendered crawl, imported lists and backlink data, then opens every page in a real Chromium browser and classifies it: hard 404, gone, suspected soft 404, redirect, server error, blocked or timed out.
+- **Check the business profile.** It compares the website's name, phone, opening hours and booking link with the public Google listing, after first confirming it found the right branch.
+- **Check opening hours.** It reads the hours the website publishes, from structured data down to plain text, and compares them day by day with Google's.
+
+Soft 404s are always labelled as suspected, with a confidence score and the exact evidence used. A failed search is never reported as a clean audit.
+
+## How it's built
+
+- **One scan engine, two surfaces.** The same engine powers a command-line tool and a local dashboard. Jobs are stored in SQLite, so a cancelled or interrupted scan resumes without rechecking finished URLs.
+- **Fast without being rude.** Ten workers by default, at most four requests per host, a delay between requests, and URLs interleaved across hosts so every worker stays busy.
+- **A serverless edition.** On Netlify, short functions each run one step of an audit inside a time budget and hand unfinished work back to the queue. Audits are stored in the browser, so no database is needed.
+- **Reports people can use.** Each run exports an Excel workbook with typed dates, filters and status colours, plus CSV and JSON files.
+
+## Stack
+
+TypeScript and Node.js, Playwright with Chromium, SQLite, Netlify Functions, and a dependency-free dashboard with light and dark themes. Optional providers: Serper or SearchApi for Google results, Google Search Console, Google Places and DataForSEO.

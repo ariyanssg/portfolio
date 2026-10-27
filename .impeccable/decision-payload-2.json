@@ -1,0 +1,56 @@
+{
+  "title": "A more professional hand",
+  "question": "Safer re-roll: three professional directions plus the category standard. Pick one, steer, or re-roll.",
+  "options": [
+    {
+      "id": "grounded-datasheet",
+      "kind": "grounded",
+      "label": "Spec Sheet",
+      "lineage": "engineering datasheets: the front page of a component spec",
+      "thesis": "You, documented like a well-made component: features, specifications, applications, revision history.",
+      "palette": ["#FFFFFF", "#121417", "#5B6470", "#D3D8DE", "#C2410C"],
+      "materials": ["white paper", "hairline tables", "one signal colour", "numbered figures"],
+      "viewport": "A header band with your name as the part title, then Features beside a figure of your flagship system; real tables below.",
+      "risk": "Reads dry if the tables are set without care; it relies on typography doing the work.",
+      "html": ".impeccable/mocks/decision/grounded-datasheet.html"
+    },
+    {
+      "id": "grounded-release-notes",
+      "kind": "grounded",
+      "label": "Release Notes",
+      "lineage": "versioned product changelogs and release notes",
+      "thesis": "Your career read as release notes: every role and project an entry of what shipped.",
+      "palette": ["#FAFAF9", "#18181B", "#71717A", "#15803D"],
+      "materials": ["dated rail", "version tags", "diff marks"],
+      "viewport": "Your name and one line, then a dated rail down the left with each project and role as a release entry.",
+      "risk": "Very close to how developer-tool sites already look; familiar by design.",
+      "html": ".impeccable/mocks/decision/grounded-release-notes.html"
+    },
+    {
+      "id": "grounded-unigrid",
+      "kind": "grounded",
+      "label": "Unigrid",
+      "lineage": "Vignelli's Unigrid for park brochures: black title band, strict modular grid",
+      "thesis": "A disciplined modular grid under one black title band, where the work does all the talking.",
+      "palette": ["#FFFFFF", "#111111", "#6B6B6B", "#B91C1C"],
+      "materials": ["black title band", "modular grid", "product screenshots"],
+      "viewport": "A black band carrying your name across the top; below, a strict grid of project panels with real screenshots.",
+      "risk": "Austere; without strong screenshots it can look empty.",
+      "html": ".impeccable/mocks/decision/grounded-unigrid.html"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code", "toggle": false},
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "The category standard",
+    "thesis": "The developer-portfolio canon at full craft, measured against Brittany Chiang, Lee Robinson and Paco Coursey.",
+    "palette": ["#0B1220", "#E2E8F0", "#5EEAD4"],
+    "materials": ["sticky intro column", "scrolling experience list"],
+    "viewport": "A sticky left column with name, role and section links; experience and projects scroll on the right.",
+    "risk": "Indistinguishable from countless developer portfolios by design.",
+    "html": ".impeccable/mocks/decision/canon.html"
+  },
+  "steer": true
+}

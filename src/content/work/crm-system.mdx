@@ -1,0 +1,31 @@
+## The problem
+
+A business that sells access to software accounts has to track a lot by hand: which products it offers, which real account sits behind each one, how many seats are left on a shared account, which customers renew when, and who needs help. Spreadsheets break as soon as more than one person uses them.
+
+## What I built
+
+A CRM with two sides, built on Next.js and Supabase.
+
+**Admin console**
+
+- Dashboard and analytics: active subscriptions, customers, revenue and plans about to expire.
+- Products, either shared with a seat limit or individual, each with a price and billing cycle.
+- Master accounts: the real accounts behind each product. Their passwords are encrypted with AES-256 before they are stored, and only admins can decrypt them.
+- Subscriptions: assign customers to an account with a live check of remaining seats, add several customers at once by email, and export the list to PDF.
+- Customers, support issues with internal-only comments, and in-app notifications.
+
+**Customer portal**
+
+- The products a customer has, with renewal dates.
+- Support issues they can open and follow.
+- Notifications and profile settings.
+
+## Decisions
+
+- **Security lives in the database.** Every table has row-level security policies, so a customer can only ever read their own rows, whatever the front end does.
+- **The database keeps the history.** Triggers write audit logs and notifications as data changes.
+- **Renewals run on a schedule.** A Supabase Edge Function extends subscriptions automatically and is protected by a secret.
+
+## Stack
+
+Next.js (App Router), React, TypeScript, Tailwind CSS, shadcn/ui on Radix, React Hook Form and Zod, Supabase (PostgreSQL, Auth, row-level security, Edge Functions) and jsPDF.

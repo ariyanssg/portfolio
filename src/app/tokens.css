@@ -1,0 +1,116 @@
+@theme static {
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-display: clamp(2.5rem, 3vw + 1.5rem, 3.5rem);
+  --text-section: clamp(1.5rem, 0.8vw + 1.25rem, 1.875rem);
+  --text-title: clamp(1.25rem, 0.5vw + 1.1rem, 1.5rem);
+  --text-lead: clamp(1.0625rem, 0.3vw + 1rem, 1.1875rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --color-error: oklch(52% 0.19 27);
+  --color-success: oklch(50% 0.12 150);
+
+  /* Light: daylight paper and graphite ink, one amber signal. */
+  --color-paper: oklch(98.6% 0.003 85);
+  --color-paper-2: oklch(96.2% 0.004 85);
+  --color-paper-3: oklch(92.6% 0.005 85);
+  --color-ink: oklch(21% 0.008 260);
+  --color-ink-2: oklch(36% 0.008 260);
+  --color-muted: oklch(49% 0.01 260);
+  --color-rule: oklch(89.5% 0.004 85);
+  --color-accent: oklch(80% 0.145 72);
+  --color-accent-ink: oklch(21% 0.03 65);
+  --color-accent-line: oklch(55% 0.13 66);
+  --color-focus: oklch(55% 0.13 66);
+
+  --font-display: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
+  --font-code: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --radius-card: 12px;
+  --radius-control: 8px;
+  --shadow-card: 0 1px 2px oklch(21% 0.008 260 / 0.06), 0 8px 24px -12px oklch(21% 0.008 260 / 0.18);
+  --tracking-display: -0.03em;
+}
+
+/* Dark: graphite after hours, the same amber. */
+:root[data-theme="dark"] {
+  --color-paper: oklch(22% 0.006 260);
+  --color-paper-2: oklch(25.5% 0.007 260);
+  --color-paper-3: oklch(30% 0.008 260);
+  --color-ink: oklch(94% 0.004 85);
+  --color-ink-2: oklch(84% 0.005 85);
+  --color-muted: oklch(71% 0.01 260);
+  --color-rule: oklch(34% 0.008 260);
+  --color-accent: oklch(80% 0.145 72);
+  --color-accent-ink: oklch(21% 0.03 65);
+  --color-accent-line: oklch(80% 0.145 72);
+  --color-focus: oklch(80% 0.145 72);
+  --shadow-card: 0 1px 2px oklch(0% 0 0 / 0.3), 0 12px 32px -16px oklch(0% 0 0 / 0.6);
+  color-scheme: dark;
+}
+
+/* Without the theme script, follow the system. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-paper: oklch(22% 0.006 260);
+    --color-paper-2: oklch(25.5% 0.007 260);
+    --color-paper-3: oklch(30% 0.008 260);
+    --color-ink: oklch(94% 0.004 85);
+    --color-ink-2: oklch(84% 0.005 85);
+    --color-muted: oklch(71% 0.01 260);
+    --color-rule: oklch(34% 0.008 260);
+    --color-accent: oklch(80% 0.145 72);
+    --color-accent-ink: oklch(21% 0.03 65);
+    --color-accent-line: oklch(80% 0.145 72);
+    --color-focus: oklch(80% 0.145 72);
+    --shadow-card: 0 1px 2px oklch(0% 0 0 / 0.3), 0 12px 32px -16px oklch(0% 0 0 / 0.6);
+    color-scheme: dark;
+  }
+}
+
+/* Print: paper is paper, whatever the screen theme. */
+@media print {
+  :root, :root[data-theme="dark"] {
+    --color-paper: oklch(99.6% 0.002 85);
+    --color-paper-2: oklch(99.6% 0.002 85);
+    --color-ink: oklch(12% 0.006 260);
+    --color-ink-2: oklch(24% 0.006 260);
+    --color-muted: oklch(38% 0.008 260);
+    --color-rule: oklch(82% 0.004 85);
+    --color-accent: oklch(12% 0.006 260);
+    --color-accent-ink: oklch(99.6% 0.002 85);
+    --color-accent-line: oklch(12% 0.006 260);
+    color-scheme: light;
+  }
+}
+
+:root {
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 144px;
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  --container: 1200px;
+  --gutter: 20px;
+  --gap-columns: 64px;
+  --section-gap: 72px;
+  --z-sticky-nav: 300;
+  --rule-hair: 1px;
+  color-scheme: light;
+}
+@media (min-width: 40rem) { :root { --gutter: 32px; --section-gap: 88px; } }
+@media (min-width: 64rem) { :root { --gutter: 48px; --section-gap: 112px; } }

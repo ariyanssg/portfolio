@@ -1,0 +1,24 @@
+## The problem
+
+Making good flashcards takes longer than studying them. Most people stop at highlighting their notes, and highlighting is not practice.
+
+## What I built
+
+A web app that turns study material into a deck you can practise right away.
+
+- **Bring notes in any form.** Paste text, upload a Word or plain-text file, or take a photo of handwritten notes. The app reads the file in the browser and sends it to Google's Gemini model, which writes question-and-answer cards from it.
+- **Study four ways.** Classic flip cards, a quiz, a written-answer mode and a matching game.
+- **Spaced repetition.** Rating a card easy, medium or hard adjusts its ease factor and schedules the next review, so difficult cards come back sooner.
+- **See progress.** Study stats and charts show what has been reviewed and what is due.
+- **Make it yours.** Deck templates and a theme customiser.
+
+## How it's built
+
+- React and TypeScript on Vite, with Tailwind CSS and Radix primitives for accessible dialogs, menus and toasts.
+- Zustand holds decks and study state.
+- Mammoth reads Word files in the browser; images go to Gemini as they are. React Dropzone handles uploads.
+- Recharts draws the study statistics.
+
+## Stack
+
+React, TypeScript, Vite, Tailwind CSS, Zustand, the Gemini API, Mammoth and Recharts.

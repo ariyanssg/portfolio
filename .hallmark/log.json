@@ -1,0 +1,31 @@
+[
+ {
+  "shape": "identity column + scrolling record (canon)",
+  "theme": "custom",
+  "axes": "warm-white/grotesk/amber",
+  "hero": "sticky identity column: portrait, name, one sentence, resume and email actions",
+  "nav": "section links in the column; top bar with disclosure menu on phones",
+  "footer": "one line, name, profile links on phones",
+  "imagery": "product screenshot + drawn system figure",
+  "photos": [],
+  "entry": "work leads the right column",
+  "fingerprint": "amber single signal, Schibsted Grotesk 400/600/700, hairline rules",
+  "sections": [
+   "work",
+   "experience",
+   "education",
+   "skills",
+   "contact"
+  ],
+  "signature": "Vela architecture figure",
+  "waived": [
+   "77",
+   "78",
+   "44c",
+   "59"
+  ],
+  "prompt": "portfolio and resume for a full-stack developer, simple and professional, mobile-first",
+  "date": "2026-10-27",
+  "mode": "build"
+ }
+]

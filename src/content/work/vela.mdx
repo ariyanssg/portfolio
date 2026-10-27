@@ -1,0 +1,31 @@
+## The problem
+
+A full-service hotel usually runs on several systems that talk through interfaces: a property management system at the front desk, a point of sale in the restaurant, a booking engine on the website and accounting at the back. Every hand-off is a place where data drifts. A dinner charge reaches the guest's bill late, or a room sells twice because two systems disagreed about availability.
+
+## What I'm building
+
+Vela is one platform for all of it. It is a **modular monolith**: one NestJS application whose modules (reservations, availability, rates, folio, ledger, point of sale and more) all read and write the same PostgreSQL database.
+
+<VelaFigure />
+
+That single core is the point:
+
+- A restaurant check posting to a guest's folio is **one ACID transaction**, not a message between systems.
+- The booking engine reads the **same availability counters** the front desk writes.
+- Accounting entries are written **in the same transaction** as the business event that caused them.
+
+## Decisions that keep it correct
+
+- **Money is never a float.** Amounts are stored as `numeric(14,4)`, sent as strings in JSON and handled through a Money value object in code.
+- **Financial rows are immutable.** Corrections are reversal rows, never an update or a delete.
+- **Every change is accounted for.** Each mutation runs a permission check and writes an audit row and an outbox event in the same transaction.
+- **Tenants are isolated by the database.** PostgreSQL row-level security fails closed, and the application role cannot bypass it.
+- **Module boundaries are enforced, not hoped for.** Modules only touch their own tables; ESLint boundary rules and a module graph check fail the build when one reaches across.
+
+## Where it stands
+
+The first phase runs end to end from a single command: it provisions a hotel from templates, takes a booking through the public API, checks the guest in, posts a charge, takes a payment, checks out, runs the night audit and prints a trial balance that ties to the folio ledger. CI gates cover type checks, module boundaries, row-level security coverage, permission-guard coverage, integration tests and OpenAPI changes.
+
+## Stack
+
+Next.js, TypeScript, Tailwind CSS, TanStack Query, Zustand, React Hook Form and Zod on the front end. NestJS on Fastify, PostgreSQL with Drizzle, Redis, OpenSearch, Socket.IO and Better Auth on the back end, in a Turborepo monorepo with pnpm.

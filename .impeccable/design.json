@@ -1,0 +1,578 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-27T00:00:00Z",
+  "title": "Design System: Mahmudul Hassan",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Daylight Paper",
+        "canonical": "oklch(98.6% 0.003 85)",
+        "tonalRamp": [
+          "oklch(15% 0.002 85)",
+          "oklch(25% 0.002 85)",
+          "oklch(35% 0.003 85)",
+          "oklch(48% 0.004 85)",
+          "oklch(60% 0.004 85)",
+          "oklch(72% 0.003 85)",
+          "oklch(84% 0.003 85)",
+          "oklch(95% 0.002 85)"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Paper Shade",
+        "canonical": "oklch(96.2% 0.004 85)",
+        "tonalRamp": [
+          "oklch(15% 0.002 85)",
+          "oklch(25% 0.003 85)",
+          "oklch(35% 0.004 85)",
+          "oklch(48% 0.005 85)",
+          "oklch(60% 0.005 85)",
+          "oklch(72% 0.004 85)",
+          "oklch(84% 0.003 85)",
+          "oklch(95% 0.002 85)"
+        ]
+      },
+      "paper-3": {
+        "role": "neutral",
+        "displayName": "Paper Deep",
+        "canonical": "oklch(92.6% 0.005 85)",
+        "tonalRamp": [
+          "oklch(15% 0.003 85)",
+          "oklch(25% 0.004 85)",
+          "oklch(35% 0.004 85)",
+          "oklch(48% 0.005 85)",
+          "oklch(60% 0.006 85)",
+          "oklch(72% 0.005 85)",
+          "oklch(84% 0.004 85)",
+          "oklch(95% 0.003 85)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Graphite Ink",
+        "canonical": "oklch(21% 0.008 260)",
+        "tonalRamp": [
+          "oklch(15% 0.004 260)",
+          "oklch(25% 0.006 260)",
+          "oklch(35% 0.007 260)",
+          "oklch(48% 0.008 260)",
+          "oklch(60% 0.008 260)",
+          "oklch(72% 0.007 260)",
+          "oklch(84% 0.006 260)",
+          "oklch(95% 0.004 260)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Graphite Ink Soft",
+        "canonical": "oklch(36% 0.008 260)",
+        "tonalRamp": [
+          "oklch(15% 0.004 260)",
+          "oklch(25% 0.006 260)",
+          "oklch(35% 0.007 260)",
+          "oklch(48% 0.008 260)",
+          "oklch(60% 0.008 260)",
+          "oklch(72% 0.007 260)",
+          "oklch(84% 0.006 260)",
+          "oklch(95% 0.004 260)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Graphite Muted",
+        "canonical": "oklch(49% 0.01 260)",
+        "tonalRamp": [
+          "oklch(15% 0.005 260)",
+          "oklch(25% 0.007 260)",
+          "oklch(35% 0.008 260)",
+          "oklch(48% 0.01 260)",
+          "oklch(60% 0.01 260)",
+          "oklch(72% 0.009 260)",
+          "oklch(84% 0.007 260)",
+          "oklch(95% 0.005 260)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(89.5% 0.004 85)",
+        "tonalRamp": [
+          "oklch(15% 0.002 85)",
+          "oklch(25% 0.003 85)",
+          "oklch(35% 0.004 85)",
+          "oklch(48% 0.005 85)",
+          "oklch(60% 0.005 85)",
+          "oklch(72% 0.004 85)",
+          "oklch(84% 0.003 85)",
+          "oklch(95% 0.002 85)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Signal Amber",
+        "canonical": "oklch(80% 0.145 72)",
+        "tonalRamp": [
+          "oklch(15% 0.074 72)",
+          "oklch(25% 0.093 72)",
+          "oklch(35% 0.112 72)",
+          "oklch(48% 0.137 72)",
+          "oklch(60% 0.14 72)",
+          "oklch(72% 0.118 72)",
+          "oklch(84% 0.095 72)",
+          "oklch(95% 0.074 72)"
+        ]
+      },
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "Amber Graphite",
+        "canonical": "oklch(21% 0.03 65)",
+        "tonalRamp": [
+          "oklch(15% 0.015 65)",
+          "oklch(25% 0.019 65)",
+          "oklch(35% 0.022 65)",
+          "oklch(48% 0.027 65)",
+          "oklch(60% 0.028 65)",
+          "oklch(72% 0.024 65)",
+          "oklch(84% 0.019 65)",
+          "oklch(95% 0.015 65)"
+        ]
+      },
+      "accent-line": {
+        "role": "primary",
+        "displayName": "Amber Line",
+        "canonical": "oklch(55% 0.13 66)",
+        "tonalRamp": [
+          "oklch(15% 0.069 66)",
+          "oklch(25% 0.087 66)",
+          "oklch(35% 0.104 66)",
+          "oklch(48% 0.128 66)",
+          "oklch(60% 0.131 66)",
+          "oklch(72% 0.11 66)",
+          "oklch(84% 0.088 66)",
+          "oklch(95% 0.069 66)"
+        ]
+      },
+      "paper-dark": {
+        "role": "neutral",
+        "displayName": "Daylight Paper (dark)",
+        "canonical": "oklch(22% 0.006 260)",
+        "tonalRamp": [
+          "oklch(15% 0.004 260)",
+          "oklch(25% 0.005 260)",
+          "oklch(35% 0.006 260)",
+          "oklch(48% 0.007 260)",
+          "oklch(60% 0.007 260)",
+          "oklch(72% 0.006 260)",
+          "oklch(84% 0.005 260)",
+          "oklch(95% 0.004 260)"
+        ]
+      },
+      "paper-2-dark": {
+        "role": "neutral",
+        "displayName": "Paper Shade (dark)",
+        "canonical": "oklch(25.5% 0.007 260)",
+        "tonalRamp": [
+          "oklch(15% 0.004 260)",
+          "oklch(25% 0.005 260)",
+          "oklch(35% 0.006 260)",
+          "oklch(48% 0.007 260)",
+          "oklch(60% 0.007 260)",
+          "oklch(72% 0.006 260)",
+          "oklch(84% 0.005 260)",
+          "oklch(95% 0.004 260)"
+        ]
+      },
+      "paper-3-dark": {
+        "role": "neutral",
+        "displayName": "Paper Deep (dark)",
+        "canonical": "oklch(30% 0.008 260)",
+        "tonalRamp": [
+          "oklch(15% 0.004 260)",
+          "oklch(25% 0.006 260)",
+          "oklch(35% 0.007 260)",
+          "oklch(48% 0.008 260)",
+          "oklch(60% 0.008 260)",
+          "oklch(72% 0.007 260)",
+          "oklch(84% 0.006 260)",
+          "oklch(95% 0.004 260)"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Graphite Ink (dark)",
+        "canonical": "oklch(94% 0.004 85)",
+        "tonalRamp": [
+          "oklch(15% 0.002 85)",
+          "oklch(25% 0.003 85)",
+          "oklch(35% 0.004 85)",
+          "oklch(48% 0.005 85)",
+          "oklch(60% 0.005 85)",
+          "oklch(72% 0.004 85)",
+          "oklch(84% 0.003 85)",
+          "oklch(95% 0.002 85)"
+        ]
+      },
+      "ink-2-dark": {
+        "role": "neutral",
+        "displayName": "Graphite Ink Soft (dark)",
+        "canonical": "oklch(84% 0.005 85)",
+        "tonalRamp": [
+          "oklch(15% 0.003 85)",
+          "oklch(25% 0.004 85)",
+          "oklch(35% 0.004 85)",
+          "oklch(48% 0.005 85)",
+          "oklch(60% 0.006 85)",
+          "oklch(72% 0.005 85)",
+          "oklch(84% 0.004 85)",
+          "oklch(95% 0.003 85)"
+        ]
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "Graphite Muted (dark)",
+        "canonical": "oklch(71% 0.01 260)",
+        "tonalRamp": [
+          "oklch(15% 0.005 260)",
+          "oklch(25% 0.007 260)",
+          "oklch(35% 0.008 260)",
+          "oklch(48% 0.01 260)",
+          "oklch(60% 0.01 260)",
+          "oklch(72% 0.009 260)",
+          "oklch(84% 0.007 260)",
+          "oklch(95% 0.005 260)"
+        ]
+      },
+      "rule-dark": {
+        "role": "neutral",
+        "displayName": "Hairline (dark)",
+        "canonical": "oklch(34% 0.008 260)",
+        "tonalRamp": [
+          "oklch(15% 0.004 260)",
+          "oklch(25% 0.006 260)",
+          "oklch(35% 0.007 260)",
+          "oklch(48% 0.008 260)",
+          "oklch(60% 0.008 260)",
+          "oklch(72% 0.007 260)",
+          "oklch(84% 0.006 260)",
+          "oklch(95% 0.004 260)"
+        ]
+      },
+      "accent-line-dark": {
+        "role": "primary",
+        "displayName": "Amber Line (dark)",
+        "canonical": "oklch(80% 0.145 72)",
+        "tonalRamp": [
+          "oklch(15% 0.074 72)",
+          "oklch(25% 0.093 72)",
+          "oklch(35% 0.112 72)",
+          "oklch(48% 0.137 72)",
+          "oklch(60% 0.14 72)",
+          "oklch(72% 0.118 72)",
+          "oklch(84% 0.095 72)",
+          "oklch(95% 0.074 72)"
+        ]
+      },
+      "error": {
+        "role": "status",
+        "displayName": "Error Red",
+        "canonical": "oklch(52% 0.19 27)",
+        "tonalRamp": [
+          "oklch(15% 0.093 27)",
+          "oklch(25% 0.117 27)",
+          "oklch(35% 0.142 27)",
+          "oklch(48% 0.173 27)",
+          "oklch(60% 0.178 27)",
+          "oklch(72% 0.149 27)",
+          "oklch(84% 0.12 27)",
+          "oklch(95% 0.093 27)"
+        ]
+      },
+      "success": {
+        "role": "status",
+        "displayName": "Success Green",
+        "canonical": "oklch(50% 0.12 150)",
+        "tonalRamp": [
+          "oklch(15% 0.059 150)",
+          "oklch(25% 0.074 150)",
+          "oklch(35% 0.089 150)",
+          "oklch(48% 0.109 150)",
+          "oklch(60% 0.112 150)",
+          "oklch(72% 0.094 150)",
+          "oklch(84% 0.076 150)",
+          "oklch(95% 0.059 150)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Person or project name, once per page."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles in the record column."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project names, role title, sub-groups."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Identity sentence, case-study summary, contact invitation."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text at 65ch."
+      },
+      "body-prose": {
+        "displayName": "Prose",
+        "purpose": "Case-study long-form at 68ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, nav, links, field labels, muted group labels."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Stack lines, dates, status, figure captions."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Inline code in case-study prose only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "document-lift",
+        "value": "0 1px 2px oklch(21% 0.008 260 / 0.06), 0 8px 24px -12px oklch(21% 0.008 260 / 0.18)",
+        "purpose": "Resume sheet on screen only (light)."
+      },
+      {
+        "name": "document-lift-dark",
+        "value": "0 1px 2px oklch(0% 0 0 / 0.3), 0 12px 32px -16px oklch(0% 0 0 / 0.6)",
+        "purpose": "Resume sheet on screen only (dark and system-dark)."
+      },
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 3px color-mix(in oklab, var(--color-focus) 28%, transparent)",
+        "purpose": "Input focus, in accent-line."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default easing for state transitions."
+      },
+      {
+        "name": "ease-in",
+        "value": "cubic-bezier(0.7, 0, 0.84, 0)",
+        "purpose": "Exits."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Symmetric moves."
+      },
+      {
+        "name": "dur-micro",
+        "value": "120ms",
+        "purpose": "Button press."
+      },
+      {
+        "name": "dur-short",
+        "value": "220ms",
+        "purpose": "Colour and border transitions."
+      },
+      {
+        "name": "dur-long",
+        "value": "420ms",
+        "purpose": "Larger moves; section-nav line uses 300ms."
+      },
+      {
+        "name": "bar-name-fade",
+        "value": "200ms",
+        "purpose": "Mobile bar name fades in after the page name scrolls away."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "All animation and transition collapsed under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "40rem"
+      },
+      {
+        "name": "lg",
+        "value": "64rem"
+      }
+    ],
+    "layout": {
+      "container": "1200px",
+      "reading": "880px",
+      "gutter": "20px / 32px @40rem / 48px @64rem",
+      "sectionGap": "72px / 88px @40rem / 112px @64rem",
+      "columns": "5fr / 7fr @64rem, gap 64px",
+      "zStickyNav": 300,
+      "ruleHair": "1px"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one amber action per cluster: Download resume, Email me, Get in touch.",
+      "html": "<button class=\"ds-btn ds-btn-primary\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 15V3\"/><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m7 10 5 5 5-5\"/></svg>Download resume</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;border-radius:var(--radius-control,8px);border:1px solid transparent;font-family:var(--font-body,'Schibsted Grotesk',sans-serif);font-size:.875rem;font-weight:600;line-height:1;cursor:pointer;transition:background-color 220ms cubic-bezier(.16,1,.3,1),border-color 220ms cubic-bezier(.16,1,.3,1),transform 120ms cubic-bezier(.16,1,.3,1)}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible{outline:2px solid var(--color-focus,oklch(55% .13 66));outline-offset:2px}.ds-btn-primary{background:var(--color-accent,oklch(80% .145 72));color:var(--color-accent-ink,oklch(21% .03 65));border-color:var(--color-accent-line,oklch(55% .13 66))}.ds-btn-primary:hover{background:color-mix(in oklab,var(--color-accent,oklch(80% .145 72)) 86%,var(--color-accent-ink,oklch(21% .03 65)))}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Hairline-bordered companion action: Email me, Print, Download resume beside Get in touch.",
+      "html": "<button class=\"ds-btn2\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\"/></svg>Email me</button>",
+      "css": ".ds-btn2{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:var(--radius-control,8px);border:1px solid var(--color-rule,oklch(89.5% .004 85));background:transparent;color:var(--color-ink,oklch(21% .008 260));font-family:var(--font-body,'Schibsted Grotesk',sans-serif);font-size:.875rem;font-weight:600;line-height:1;cursor:pointer;transition:background-color 220ms cubic-bezier(.16,1,.3,1),border-color 220ms cubic-bezier(.16,1,.3,1)}.ds-btn2:hover{border-color:var(--color-muted,oklch(49% .01 260));background:var(--color-paper-2,oklch(96.2% .004 85))}.ds-btn2:active{transform:translateY(1px)}.ds-btn2:focus-visible{outline:2px solid var(--color-focus,oklch(55% .13 66));outline-offset:2px}"
+    },
+    {
+      "name": "Icon Button",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "44px square control for theme toggle and menu.",
+      "html": "<button class=\"ds-icon-btn\" aria-label=\"Switch theme\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"/></svg></button>",
+      "css": ".ds-icon-btn{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:var(--radius-control,8px);color:var(--color-ink-2,oklch(36% .008 260));background:transparent;border:1px solid transparent;cursor:pointer;transition:background-color 220ms cubic-bezier(.16,1,.3,1),color 220ms,border-color 220ms}.ds-icon-btn:hover{background:var(--color-paper-2,oklch(96.2% .004 85));color:var(--color-ink,oklch(21% .008 260));border-color:var(--color-rule,oklch(89.5% .004 85))}.ds-icon-btn:focus-visible{outline:2px solid var(--color-focus,oklch(55% .13 66));outline-offset:2px}"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "link",
+      "description": "Ink link whose underline turns amber on intent.",
+      "html": "<a href=\"#\" class=\"ds-link\">Read the case study</a>",
+      "css": ".ds-link{font-family:var(--font-body,'Schibsted Grotesk',sans-serif);font-size:.875rem;font-weight:600;color:var(--color-ink,oklch(21% .008 260));text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:.16em;text-decoration-color:color-mix(in oklab,var(--color-ink,oklch(21% .008 260)) 30%,transparent);transition:text-decoration-color 220ms cubic-bezier(.16,1,.3,1)}.ds-link:hover{text-decoration-color:var(--color-accent-line,oklch(55% .13 66))}.ds-link:focus-visible{outline:2px solid var(--color-focus,oklch(55% .13 66));outline-offset:2px}"
+    },
+    {
+      "name": "Stack Line",
+      "kind": "custom",
+      "refersTo": "caption",
+      "description": "Technologies as one muted comma-separated line; never chips.",
+      "html": "<p class=\"ds-stack\">NestJS, Next.js, PostgreSQL, Drizzle, Redis, Turborepo</p>",
+      "css": ".ds-stack{margin:0;font-family:var(--font-body,'Schibsted Grotesk',sans-serif);font-size:.875rem;line-height:1.55;color:var(--color-muted,oklch(49% .01 260))}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labelled field with muted border, amber focus halo and inline error.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-email\">Email</label><input id=\"ds-email\" class=\"ds-input\" type=\"email\" placeholder=\"you@company.com\"></div>",
+      "css": ".ds-field{display:grid;gap:4px;font-family:var(--font-body,'Schibsted Grotesk',sans-serif)}.ds-field label{font-size:.875rem;font-weight:600;color:var(--color-ink,oklch(21% .008 260))}.ds-input{width:100%;min-height:44px;padding:12px;border-radius:var(--radius-control,8px);border:1px solid var(--color-muted,oklch(49% .01 260));background:var(--color-paper,oklch(98.6% .003 85));color:var(--color-ink,oklch(21% .008 260));font:inherit;font-size:1rem;transition:border-color 220ms cubic-bezier(.16,1,.3,1)}.ds-input::placeholder{color:var(--color-muted,oklch(49% .01 260))}.ds-input:hover{border-color:var(--color-ink-2,oklch(36% .008 260))}.ds-input:focus-visible{outline:none;border-color:var(--color-focus,oklch(55% .13 66));box-shadow:0 0 0 3px color-mix(in oklab,var(--color-focus,oklch(55% .13 66)) 28%,transparent)}.ds-input[aria-invalid=true]{border-color:var(--color-error,oklch(52% .19 27))}.ds-input:focus-visible{outline:none;border-color:var(--color-focus,oklch(55% .13 66))}"
+    },
+    {
+      "name": "Section Nav",
+      "kind": "nav",
+      "refersTo": "section-nav",
+      "description": "Desktop identity-column nav; a hairline that grows and turns amber for the current section.",
+      "html": "<nav class=\"ds-snav\"><a href=\"#\" aria-current=\"location\"><span></span>Work</a><a href=\"#\"><span></span>Experience</a><a href=\"#\"><span></span>Skills</a><a href=\"#\"><span></span>Contact</a></nav>",
+      "css": ".ds-snav{display:grid;gap:4px;font-family:var(--font-body,'Schibsted Grotesk',sans-serif)}.ds-snav a{display:flex;align-items:center;gap:12px;min-height:44px;font-size:.875rem;font-weight:600;color:var(--color-muted,oklch(49% .01 260));text-decoration:none;transition:color 200ms}.ds-snav a span{display:block;height:1px;width:48px;transform-origin:left;transform:scaleX(.5);background:var(--color-rule,oklch(89.5% .004 85));transition:transform 300ms cubic-bezier(.16,1,.3,1),background-color 300ms}.ds-snav a:hover{color:var(--color-ink,oklch(21% .008 260))}.ds-snav a:hover span{transform:scaleX(.75);background:var(--color-ink,oklch(21% .008 260))}.ds-snav a[aria-current=location]{color:var(--color-ink,oklch(21% .008 260))}.ds-snav a[aria-current=location] span{transform:scaleX(1);background:var(--color-accent-line,oklch(55% .13 66))}.ds-snav a:focus-visible{outline:2px solid var(--color-focus,oklch(55% .13 66));outline-offset:2px}"
+    },
+    {
+      "name": "Mobile Top Bar",
+      "kind": "nav",
+      "refersTo": "top-bar",
+      "description": "Sticky translucent bar with name, theme toggle and menu disclosure on phones.",
+      "html": "<div class=\"ds-bar\"><a href=\"#\">Mahmudul Hassan</a><button class=\"ds-bar-btn\" aria-label=\"Open menu\" aria-expanded=\"false\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M4 6h16M4 12h16M4 18h16\"/></svg></button></div>",
+      "css": ".ds-bar{display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 20px;background:color-mix(in oklab,var(--color-paper,oklch(98.6% .003 85)) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-rule,oklch(89.5% .004 85));font-family:var(--font-body,'Schibsted Grotesk',sans-serif)}.ds-bar a{font-size:.875rem;font-weight:600;letter-spacing:-.025em;color:var(--color-ink,oklch(21% .008 260));text-decoration:none}.ds-bar-btn{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:8px;border:1px solid transparent;background:transparent;color:var(--color-ink-2,oklch(36% .008 260));cursor:pointer}.ds-bar-btn:hover{background:var(--color-paper-2,oklch(96.2% .004 85));border-color:var(--color-rule,oklch(89.5% .004 85))}.ds-bar-btn:focus-visible{outline:2px solid var(--color-focus,oklch(55% .13 66));outline-offset:2px}"
+    },
+    {
+      "name": "System Figure",
+      "kind": "custom",
+      "refersTo": "diagram-node",
+      "description": "Architecture drawn in interface materials: hairline nodes, drawn arrows, a hairline-divided module grid, one amber-line core. No enclosing panel.",
+      "html": "<figure class=\"ds-fig\"><div class=\"ds-fig-row\"><div class=\"ds-node\"><p>The Desk</p><small>Next.js</small></div><div class=\"ds-node\"><p>Booking engine</p><small>Live availability</small></div></div><svg class=\"ds-arrow\" viewBox=\"0 0 12 28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.25\" aria-hidden=\"true\"><path d=\"M6 0v26M1.5 21.5 6 26l4.5-4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><div class=\"ds-mono\"><div class=\"ds-mono-head\"><p>NestJS modular monolith</p></div><ul><li>Reservations</li><li>Availability</li><li>Rates</li><li>Folio</li><li>Ledger</li><li>Point of sale</li></ul></div><svg class=\"ds-arrow\" viewBox=\"0 0 12 28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.25\" aria-hidden=\"true\"><path d=\"M6 0v26M1.5 21.5 6 26l4.5-4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><div class=\"ds-node ds-core\"><p>PostgreSQL</p><small>Drizzle, row-level security</small></div></figure>",
+      "css": ".ds-fig{margin:0;display:grid;gap:4px;font-family:var(--font-body,'Schibsted Grotesk',sans-serif)}.ds-fig-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.ds-node{padding:10px 12px;border-radius:var(--radius-control,8px);border:1px solid var(--color-rule,oklch(89.5% .004 85));background:var(--color-paper,oklch(98.6% .003 85))}.ds-node p,.ds-mono-head p{margin:0;font-size:.875rem;font-weight:600;color:var(--color-ink,oklch(21% .008 260))}.ds-node small{font-size:.75rem;color:var(--color-muted,oklch(49% .01 260))}.ds-core{border-color:var(--color-accent-line,oklch(55% .13 66))}.ds-arrow{display:block;width:12px;height:28px;margin:0 auto;color:var(--color-muted,oklch(49% .01 260))}.ds-mono{overflow:hidden;border-radius:var(--radius-control,8px);border:1px solid color-mix(in oklab,var(--color-ink-2,oklch(36% .008 260)) 50%,transparent);background:var(--color-paper,oklch(98.6% .003 85))}.ds-mono-head{padding:10px 12px;border-bottom:1px solid var(--color-rule,oklch(89.5% .004 85))}.ds-mono ul{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:0;padding:0;list-style:none;background:var(--color-rule,oklch(89.5% .004 85))}.ds-mono li{padding:8px 12px;background:var(--color-paper,oklch(98.6% .003 85));font-size:.75rem;color:var(--color-ink-2,oklch(36% .008 260))}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Annotated Record",
+    "overview": "**Creative North Star: \"The Annotated Record\"**\n\nA calm, exact working record set on daylight paper. Who he is stays fixed in view; the work scrolls past as a plain list of evidence: real screenshots, one drawn system figure, a muted line naming the stack, dates in tabular figures. Nothing performs. Hierarchy comes from one grotesk family at three weights, graphite ink in three strengths, and hairline rules; colour is spent on a single amber that marks the next action and the current place.\n\nDensity is reading density, not dashboard density: generous section gaps, a 65ch measure for running text, and lists separated by hairlines rather than boxed into cards or decorated with pills. Dark mode is the same record after hours: graphite paper (not black), warm off-white ink, and the very same amber. Print is a third theme: paper is paper whatever the screen says, and every amber role drops to ink.\n\nThe system refuses the developer-portfolio costume: navy and teal, neon glow, badge walls, card grids, typing headers.",
+    "keyCharacteristics": [
+      "One family (Schibsted Grotesk), weights 400, 600 and 700 only; monospace for inline code alone.",
+      "Warm paper neutrals (hue 85) against cool graphite ink (hue 260); amber is the only chroma.",
+      "One amber in two jobs: a light fill behind graphite text, and a deeper line for marks drawn on paper.",
+      "Hairline rules (1px) do the structural work; text, not chips, carries metadata.",
+      "Three themes from one token set: light, dark, print.",
+      "44px minimum hit area on every control."
+    ],
+    "rules": [
+      {
+        "name": "The One Signal Rule",
+        "body": "Amber marks action and location, nothing else: the primary button, the active nav line, link hover, focus, the system's core node. Never a section fill, a heading colour, or decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Fill and Line Rule",
+        "body": "Amber as a surface uses the fill with graphite text on it; amber as a 1px mark on paper uses the line token. Never draw a thin mark in the fill colour on light paper.",
+        "section": "colors"
+      },
+      {
+        "name": "The Warm Paper, Cool Ink Rule",
+        "body": "Paper neutrals sit at hue 85, ink at hue 260, both at chroma 0.01 or below. New neutrals pick a side; none sit between.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paper Is Paper Rule",
+        "body": "In print the palette collapses to near-white paper and near-black ink, every amber role (fill, text on fill, line) maps to ink or paper, and no shadow or border frames the sheet.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Weights Rule",
+        "body": "400 reads, 600 labels and acts, 700 names. No 300, 500 or 800; font synthesis is off.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Dates Rule",
+        "body": "Dates and figures set with tabular numerals, in a fixed 9rem gutter or right-aligned, so they scan as a column.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Labels are short sentence-case words in the label style, muted when they group content. No uppercase tracked micro-labels above headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Stack Is a Sentence Rule",
+        "body": "Technologies are listed as one muted, comma-separated caption line, never as chips or badges.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Over Shadow Rule",
+        "body": "Separate with a 1px rule or a paper-2 tone. A shadow is reserved for a surface that is literally a sheet of paper.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** spend amber only on the primary action, the active location, link hover, focus and the system's core node.",
+      "**Do** use the amber fill as a surface with graphite text, and the amber-line token for every 1px amber mark.",
+      "**Do** set every surface in Schibsted Grotesk at 400, 600 or 700, with hierarchy from weight and ink strength.",
+      "**Do** separate list rows with a 1px hairline and let section gaps (72 to 112px) carry the structure.",
+      "**Do** list technologies as one muted comma-separated line.",
+      "**Do** draw diagrams as hairline boxes and drawn arrows on the page itself, with one amber-line node at most.",
+      "**Do** give every control a 44px minimum hit area and a 2px amber-line focus outline at 2px offset.",
+      "**Do** define any new colour for light, dark and print together.",
+      "**Do** set dates and figures in tabular numerals."
+    ],
+    "donts": [
+      "**Don't** add a second accent hue, gradients on content, or glow effects.",
+      "**Don't** render stack, skills or categories as pills, chips or badges.",
+      "**Don't** box secondary items into card grids or nest a card inside a card.",
+      "**Don't** add drop shadows to cards, buttons or figures; the document lift belongs to the resume sheet alone.",
+      "**Don't** add uppercase tracked micro-labels above headings; labels are sentence case.",
+      "**Don't** introduce a second typeface for display; monospace is for inline code only.",
+      "**Don't** use decorative illustration or stock imagery; pictures are real screenshots or drawn system figures."
+    ]
+  }
+}
