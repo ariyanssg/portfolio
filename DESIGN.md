@@ -25,44 +25,44 @@ colors:
 typography:
   display:
     fontFamily: "Schibsted Grotesk, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(2.5rem, 3vw + 1.5rem, 3.5rem)"
-    fontWeight: 700
-    lineHeight: 1.02
-    letterSpacing: "-0.03em"
+    fontSize: "clamp(2.75rem, 3.2vw + 1.6rem, 4rem)"
+    fontWeight: 600
+    lineHeight: 1.0
+    letterSpacing: "-0.035em"
   headline:
     fontFamily: "Schibsted Grotesk, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(1.5rem, 0.8vw + 1.25rem, 1.875rem)"
-    fontWeight: 700
-    lineHeight: 1.15
-    letterSpacing: "-0.02em"
+    fontSize: "clamp(1.875rem, 1.4vw + 1.4rem, 2.625rem)"
+    fontWeight: 600
+    lineHeight: 1.1
+    letterSpacing: "-0.025em"
   title:
     fontFamily: "Schibsted Grotesk, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(1.25rem, 0.5vw + 1.1rem, 1.5rem)"
-    fontWeight: 700
+    fontSize: "clamp(1.3125rem, 0.5vw + 1.15rem, 1.625rem)"
+    fontWeight: 600
     letterSpacing: "-0.025em"
   lead:
     fontFamily: "Schibsted Grotesk, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(1.0625rem, 0.3vw + 1rem, 1.1875rem)"
+    fontSize: "clamp(1.125rem, 0.35vw + 1.05rem, 1.25rem)"
     fontWeight: 400
     lineHeight: 1.625
   body:
     fontFamily: "Schibsted Grotesk, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "1rem"
+    fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.55
   body-prose:
     fontFamily: "Schibsted Grotesk, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "1rem"
+    fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.7
   label:
     fontFamily: "Schibsted Grotesk, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "0.875rem"
+    fontSize: "0.9375rem"
     fontWeight: 600
     lineHeight: 1
   caption:
     fontFamily: "Schibsted Grotesk, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "0.875rem"
+    fontSize: "0.9375rem"
     fontWeight: 400
     lineHeight: 1.55
   code:
@@ -71,6 +71,7 @@ typography:
 rounded:
   control: "8px"
   card: "12px"
+  capsule: "999px"
 spacing:
   3xs: "2px"
   2xs: "4px"
@@ -141,7 +142,7 @@ Density is reading density, not dashboard density: generous section gaps, a 65ch
 The system refuses the developer-portfolio costume: navy and teal, neon glow, badge walls, card grids, typing headers.
 
 **Key Characteristics:**
-- One family (Schibsted Grotesk), weights 400, 600 and 700 only; monospace for inline code alone.
+- One family (Schibsted Grotesk), weights 400 and 600 only; monospace for inline code alone.
 - Warm paper neutrals (hue 85) against cool graphite ink (hue 260); amber is the only chroma.
 - One amber in two jobs: a light fill behind graphite text, and a deeper line for marks drawn on paper.
 - Hairline rules (1px) do the structural work; text, not chips, carries metadata.
@@ -187,16 +188,16 @@ A near-neutral paper-and-graphite palette with one warm amber signal; all canoni
 **Character:** A single editorial grotesk, tight and confident at display size, plain and even in running text. Weight and ink strength carry hierarchy; there is no second face.
 
 ### Hierarchy
-- **Display** (700, clamp 2.5 to 3.5rem, 1.02, -0.03em): the person's name on home and the project name on a case study. Once per page.
-- **Headline** (700, clamp 1.5 to 1.875rem, 1.15, -0.02em): section titles in the record column (Selected work, Experience, Education, Skills, Contact).
-- **Title** (700, clamp 1.25 to 1.5rem, tight tracking): featured project names, role title, next-case-study link.
-- **Lead** (400, clamp 1.0625 to 1.1875rem, relaxed): the identity sentence (max 34ch), the case-study summary (48ch), the contact invitation (55ch).
-- **Body** (400, 1rem, 1.55): all running text, max 65ch. In case-study prose, 1.7 line height with a 68ch measure; prose h2 is 1.375rem/700, h3 1.125rem/600.
-- **Label** (600, 0.875rem): buttons, nav links, profile links, field labels, and muted group labels (More projects, Degrees, Status, skill groups) in sentence case.
-- **Caption** (400, 0.875rem, muted): stack lines, dates, status, figure captions; hints and field errors drop to 0.8125rem.
+- **Display** (600, clamp 2.75 to 4rem, 1.0, -0.035em): the person's name on home and the project name on a case study. Once per page.
+- **Headline** (600, clamp 1.875 to 2.625rem, 1.1, -0.025em): section titles in the record column (Selected work, Experience, Education, Skills, Contact).
+- **Title** (600, clamp 1.3125 to 1.625rem, tight tracking): featured project names, role title, next-case-study link.
+- **Lead** (400, clamp 1.125 to 1.25rem, relaxed, balanced): the identity sentence (max 34ch), the case-study summary (48ch), the contact invitation (55ch).
+- **Body** (400, 1.0625rem = 17px, the Apple default, 1.55): all running text, max 65ch. In case-study prose, 1.7 line height with a 68ch measure; prose h2 is 1.375rem/600, h3 1.125rem/600.
+- **Label** (600, 0.9375rem): buttons, nav links, profile links, field labels, and muted group labels (More projects, Degrees, Status, skill groups) in sentence case.
+- **Caption** (400, 0.9375rem, muted): stack lines, dates, status, figure captions; hints and field errors drop to 0.8125rem.
 
 ### Named Rules
-**The Three Weights Rule.** 400 reads, 600 labels and acts, 700 names. No 300, 500 or 800; font synthesis is off.
+**The Two Weights Rule.** 400 reads; 600 labels, acts and names, including the display name. No 300, 500, 700 or 800; font synthesis is off.
 
 **The Tabular Dates Rule.** Dates and figures set with tabular numerals, in a fixed 9rem gutter or right-aligned, so they scan as a column.
 
@@ -204,9 +205,17 @@ A near-neutral paper-and-graphite palette with one warm amber signal; all canoni
 
 **The Stack Is a Sentence Rule.** Technologies are listed as one muted, comma-separated caption line, never as chips or badges.
 
+## Appearance and accessibility settings
+
+The site follows the system appearance only; there is no in-page theme switch (Apple HIG, dark-mode.md › Best practices). Increase Contrast raises muted text and rules toward the ink in both appearances; Reduce Transparency turns the top bar solid; Reduce Motion removes the entrance and smooth scrolling.
+
+## Motion
+
+One authored moment: on first load the identity column's four groups settle in (8px rise and fade, 420ms ease-out, 60ms stagger). Everything else moves only in response to a person: hover colour, the nav indicator, the press nudge.
+
 ## Layout
 
-Mobile-first, one column, with a sticky 56px top bar (theme toggle and menu disclosure; the name fades in only once the page's own name has scrolled away) on phones and tablets. At 64rem the home page becomes the two-column canon: a 5fr identity column, sticky at full viewport height (portrait, name, sentence, primary and secondary actions, section nav, profile links and theme toggle pinned to its foot), and a 7fr record column that scrolls; 64px between columns. At that width the footer drops its profile links because the column already holds them.
+Mobile-first, one column, with a sticky 56px top bar (menu disclosure; the name fades in only once the page's own name has scrolled away) on phones and tablets. At 64rem the home page becomes the two-column canon: a 5fr identity column, sticky at full viewport height (portrait, name, sentence, primary and secondary actions, section nav, and profile links pinned to its foot), and a 7fr record column that scrolls; 64px between columns. At that width the footer drops its profile links because the column already holds them.
 
 Container: 1200px max with a responsive gutter (20px, 32px at 40rem, 48px at 64rem). Section gap scales the same way (72px, 88px, 112px). Reading surfaces (case study, resume) narrow to 880px with a sticky or inline back link. Supporting rows use a 9rem label gutter beside content (experience dates, Degrees, Languages) from 40rem up. Lists of secondary items are rows split by hairlines under a muted label, not grids of cards. Spacing follows the 4/8 scale in the frontmatter; component internals use 8 to 24px, section internals 24 to 48px. Lists, definitions and captions wrap with `text-wrap: pretty`; headings balance.
 
@@ -222,23 +231,23 @@ Flat. Depth is tonal and linear: paper nodes outlined by hairlines, a paper-2 fr
 
 ## Shapes
 
-Gently rounded and consistent: 8px on every control and every drawn box (buttons, icon buttons, inputs, diagram nodes, inline code), 12px on framing containers (screenshot frame, resume sheet), a circle on the portrait only. Borders are always 1px. Grouped items inside one box are divided by hairlines (a 1px gap grid), not given their own corners.
+Gently rounded and consistent: capsules for buttons, 8px on every other control and drawn box (icon buttons, inputs, diagram nodes, inline code), 12px on framing containers (screenshot frame, resume sheet), a circle on the portrait only. Borders are always 1px. Grouped items inside one box are divided by hairlines (a 1px gap grid), not given their own corners.
 
 ## Components
 
 ### Buttons
 Quiet, solid, a single pair.
-- **Shape:** 8px radius, 44px minimum height, 16px inline padding, 8px icon gap, 16px line icons at stroke 2.
+- **Shape:** capsule (full pill), 44px minimum height, 20px inline padding (24px from 40rem), 8px icon gap, 16px line icons at stroke 2.
 - **Primary:** amber fill, graphite text, 1px amber-line border, 600 label. One per cluster: Download resume, Email me, Send message, Get in touch.
 - **Hover / Active:** primary deepens toward its graphite ink (86% amber mix); press nudges 1px down; colour transitions 220ms ease-out.
 - **Secondary:** transparent with a hairline border and ink text; hover shifts the border to muted and fills paper-2.
 - **Disabled:** 55% opacity, no press.
 
 ### Icon Buttons
-44px square, 8px radius, ink-2 glyph at 20px (stroke 1.75), transparent at rest; hover fills paper-2 with a hairline. Used for theme toggle and menu.
+44px square, 8px radius, ink-2 glyph at 20px (stroke 1.75), transparent at rest; hover fills paper-2 with a hairline. Used for the menu.
 
 ### Links
-Ink text with an underline at 30% ink and 0.16em offset; on hover the underline turns amber-line. Project titles carry no underline until hover, then an amber-line one at 4px offset. Link clusters are 600 labels spaced 20px apart.
+Ink text with an underline at 30% ink and 0.16em offset; on hover the underline turns amber-line. Project titles carry no underline until hover, then an amber-line one at 4px offset. Link clusters are 600 labels spaced 24px apart, each a 44px tap target on touch and 28px with a fine pointer (the `.tap` class).
 
 ### Inputs / Fields
 - **Style:** paper fill, 1px muted border (darker than hairline, for 3:1 boundary contrast), 8px radius, 44px minimum, 12px padding, 1rem text. Label above in the label style; optional muted hint between label and field.
@@ -248,8 +257,8 @@ Ink text with an underline at 30% ink and 0.16em offset; on hover the underline 
 
 ### Navigation
 - **Section nav (desktop):** a vertical list of 600 labels in muted, each led by a 48px hairline drawn at half length. Hover extends it to three quarters in ink; the current section (aria-current="location") draws it full length in amber-line and sets the label in ink. 300ms ease-out.
-- **Top bar (phone):** sticky, 56px, paper at 90% with backdrop blur and a hairline bottom. The name is hidden and unfocusable while the page's own name is on screen, then fades in (200ms). Menu is a disclosure panel of 48px rows, closes on Escape or selection.
-- **Reading pages:** a sticky back link with a left arrow and the theme toggle, at the 880px measure.
+- **Top bar (phone):** sticky, 56px, the one material in the system: paper at 82% with saturate and 16px blur, a hairline bottom, solid paper under Reduce Transparency. The name is hidden and unfocusable while the page's own name is on screen, then fades in (200ms). Menu is a disclosure panel of 48px rows, closes on Escape or selection.
+- **Reading pages:** a sticky bar in the same material with a back link and a left arrow, at the 880px measure.
 
 ### System Figure (signature)
 Architecture drawn in the interface's own materials rather than illustrated, with no enclosing panel. Tiers stack vertically: paper nodes with hairline borders and 8px corners, joined by drawn muted arrows (1.25 stroke, 28px tall). The monolith is one box bordered in ink-2 at 50%, its header split from a module grid by a hairline, modules divided by 1px hairline gaps. Exactly one node, the system's core, takes an amber-line edge. Node text uses a 600 label over a muted caption; a compact variant shortens the captions for the home page.
@@ -262,7 +271,7 @@ A real screenshot full-bleed inside a 12px paper-2 frame with a hairline border 
 ### Do:
 - **Do** spend amber only on the primary action, the active location, link hover, focus and the system's core node.
 - **Do** use the amber fill as a surface with graphite text, and the amber-line token for every 1px amber mark.
-- **Do** set every surface in Schibsted Grotesk at 400, 600 or 700, with hierarchy from weight and ink strength.
+- **Do** set every surface in Schibsted Grotesk at 400 or 600, with hierarchy from weight and ink strength.
 - **Do** separate list rows with a 1px hairline and let section gaps (72 to 112px) carry the structure.
 - **Do** list technologies as one muted comma-separated line.
 - **Do** draw diagrams as hairline boxes and drawn arrows on the page itself, with one amber-line node at most.

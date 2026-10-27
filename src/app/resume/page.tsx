@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const resumeProjects = [...featuredProjects, ...moreProjects.filter((p) => p.caseStudy)];
 
 function Heading({ children }: { children: React.ReactNode }) {
-  return <h2 className="border-b border-rule pb-1.5 text-base font-bold text-ink">{children}</h2>;
+  return <h2 className="border-b border-rule pb-1.5 text-base font-semibold text-ink">{children}</h2>;
 }
 
 export default function Resume() {
@@ -34,22 +34,22 @@ export default function Resume() {
 
       <article className="resume-sheet grid gap-7 rounded-card border border-rule bg-paper p-6 shadow-[var(--shadow-card)] sm:p-10">
         <header className="grid gap-2">
-          <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">{profile.name}</h1>
+          <h1 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">{profile.name}</h1>
           <p className="text-lg text-ink-2">{profile.role}</p>
-          <ul className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-ink-2">
+          <ul className="flex flex-wrap gap-x-5 text-sm text-ink-2">
             <li>{profile.location}</li>
             <li>
-              <a href={`mailto:${profile.email}`} className="link">
+              <a href={`mailto:${profile.email}`} className="link tap">
                 {profile.email}
               </a>
             </li>
             <li>
-              <a href={profile.linkedin} className="link">
+              <a href={profile.linkedin} className="link tap">
                 linkedin.com/{profile.linkedinHandle}
               </a>
             </li>
             <li>
-              <a href={profile.github} className="link">
+              <a href={profile.github} className="link tap">
                 github.com/{profile.githubHandle}
               </a>
             </li>
@@ -70,7 +70,7 @@ export default function Resume() {
           {experience.map((job) => (
             <div key={job.company} className="grid gap-2">
               <div className="flex flex-wrap items-baseline justify-between gap-x-4">
-                <h3 className="font-bold text-ink">
+                <h3 className="font-semibold text-ink">
                   {job.role}, {job.company}
                 </h3>
                 <p className="num text-sm text-muted">
@@ -94,7 +94,7 @@ export default function Resume() {
           <ul className="grid gap-3">
             {resumeProjects.map((p) => (
               <li key={p.slug} className="grid gap-0.5">
-                <h3 className="font-bold text-ink">{p.name}</h3>
+                <h3 className="font-semibold text-ink">{p.name}</h3>
                 <p className="text-ink-2">{p.summary}</p>
                 <p className="text-sm text-muted">{p.stack.join(", ")}</p>
               </li>
@@ -124,7 +124,7 @@ export default function Resume() {
             {education.map((e) => (
               <li key={e.school} className="flex flex-wrap items-baseline justify-between gap-x-4">
                 <p>
-                  <span className="font-bold text-ink">{e.school}</span>
+                  <span className="font-semibold text-ink">{e.school}</span>
                   <span className="text-ink-2">, {e.detail}</span>
                 </p>
                 <p className="text-sm text-muted">{e.place}</p>

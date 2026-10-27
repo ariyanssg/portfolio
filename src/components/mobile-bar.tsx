@@ -2,7 +2,6 @@
 
 import { useEffect, useId, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./theme-toggle";
 
 type Section = { id: string; label: string };
 
@@ -32,11 +31,11 @@ export function MobileBar({ name, sections }: { name: string; sections: readonly
   }, [open]);
 
   return (
-    <div className="sticky top-0 z-[var(--z-sticky-nav)] border-b border-rule bg-paper/90 backdrop-blur-md lg:static lg:hidden">
+    <div className="bar sticky top-0 z-[var(--z-sticky-nav)] border-b border-rule lg:static lg:hidden">
       <div className="container flex h-14 items-center justify-between gap-4">
         <a
           href="#top"
-          className={`text-sm font-semibold tracking-tight text-ink no-underline transition-opacity duration-200 ${
+          className={`tap text-sm font-semibold tracking-tight text-ink no-underline transition-opacity duration-200 ${
             showName ? "opacity-100" : "pointer-events-none opacity-0"
           }`}
           tabIndex={showName ? undefined : -1}
@@ -45,7 +44,6 @@ export function MobileBar({ name, sections }: { name: string; sections: readonly
           {name}
         </a>
         <div className="flex items-center">
-          <ThemeToggle />
           <button
             type="button"
             className="icon-btn"

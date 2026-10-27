@@ -15,7 +15,6 @@ import {
 } from "@/content/site";
 import { MobileBar } from "@/components/mobile-bar";
 import { SectionNav } from "@/components/section-nav";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { ContactForm } from "@/components/contact-form";
 import { VelaFigure } from "@/components/vela-figure";
 import { Signal404Figure } from "@/components/signal404-figure";
@@ -25,7 +24,7 @@ const figures: Record<string, React.ReactNode> = {
   signal404: <Signal404Figure caption={false} />,
 };
 
-function ExternalLink({ href, label, className = "link" }: { href: string; label: string; className?: string }) {
+function ExternalLink({ href, label, className = "link tap" }: { href: string; label: string; className?: string }) {
   return (
     <a href={href} target="_blank" rel="noreferrer" className={className} aria-label={`${label} (opens in a new tab)`}>
       {label}
@@ -35,10 +34,10 @@ function ExternalLink({ href, label, className = "link" }: { href: string; label
 
 function ProjectLinks({ project }: { project: Project }) {
   return (
-    <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+    <ul className="flex flex-wrap gap-x-6 text-sm font-semibold">
       {project.caseStudy && (
         <li>
-          <Link href={`/work/${project.slug}`} className="link">
+          <Link href={`/work/${project.slug}`} className="link tap">
             Read the case study
           </Link>
         </li>
@@ -54,7 +53,7 @@ function ProjectLinks({ project }: { project: Project }) {
 
 function Intro() {
   return (
-    <div className="grid gap-6">
+    <div className="enter grid gap-6">
       <Image
         src={portrait}
         alt={`Portrait of ${profile.name}`}
@@ -64,10 +63,10 @@ function Intro() {
         className="size-[72px] rounded-full border border-rule object-cover sm:size-[88px]"
       />
       <div className="grid gap-3">
-        <h1 id="hero-name" className="text-[length:var(--text-display)] font-bold leading-[1.02] tracking-[var(--tracking-display)] text-ink">
+        <h1 id="hero-name" className="text-[length:var(--text-display)] font-semibold leading-[1.0] tracking-[var(--tracking-display)] text-ink">
           {profile.name}
         </h1>
-        <p className="max-w-[34ch] text-[length:var(--text-lead)] leading-relaxed text-ink-2">{profile.sentence}</p>
+        <p className="max-w-[34ch] text-balance text-[length:var(--text-lead)] leading-relaxed text-ink-2">{profile.sentence}</p>
       </div>
       <div className="flex flex-wrap gap-3">
         <a href={profile.resumePdf} download className="btn btn-primary">
@@ -85,7 +84,7 @@ function Intro() {
 
 function Profiles() {
   return (
-    <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-semibold">
+    <ul className="flex flex-wrap items-center gap-x-6 text-sm font-semibold">
       <li>
         <ExternalLink href={profile.github} label="GitHub" />
       </li>
@@ -93,7 +92,7 @@ function Profiles() {
         <ExternalLink href={profile.linkedin} label="LinkedIn" />
       </li>
       <li>
-        <Link href="/resume" className="link">
+        <Link href="/resume" className="link tap">
           Resume page
         </Link>
       </li>
@@ -107,8 +106,8 @@ function FeaturedProject({ project }: { project: Project }) {
       {figures[project.slug]}
       <div className="grid gap-3">
         <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-          <h3 id={`p-${project.slug}`} className="text-[length:var(--text-title)] font-bold tracking-tight text-ink">
-            <Link href={`/work/${project.slug}`} className="no-underline hover:underline decoration-accent-line underline-offset-4">
+          <h3 id={`p-${project.slug}`} className="text-[length:var(--text-title)] font-semibold tracking-tight text-ink">
+            <Link href={`/work/${project.slug}`} className="tap no-underline hover:underline decoration-accent-line underline-offset-4">
               {project.name}
             </Link>
           </h3>
@@ -129,7 +128,7 @@ function ProjectRow({ project }: { project: Project }) {
       <div>
         <h4 className="text-lg font-semibold text-ink">
           {project.caseStudy ? (
-            <Link href={`/work/${project.slug}`} className="no-underline hover:underline decoration-accent-line underline-offset-4">
+            <Link href={`/work/${project.slug}`} className="tap no-underline hover:underline decoration-accent-line underline-offset-4">
               {project.name}
             </Link>
           ) : (
@@ -169,12 +168,7 @@ export default function Home() {
             <Intro />
             <SectionNav sections={sections} />
           </div>
-          <div className="flex items-center justify-between gap-4">
-            <Profiles />
-            <div className="hidden lg:block">
-              <ThemeToggle />
-            </div>
-          </div>
+          <Profiles />
         </header>
 
         <main id="main" className="grid gap-[var(--section-gap)] pb-20 lg:py-20">
@@ -204,7 +198,7 @@ export default function Home() {
               </p>
               <div className="grid gap-4">
                 <div>
-                  <h3 className="text-[length:var(--text-title)] font-bold tracking-tight text-ink">{job.role}</h3>
+                  <h3 className="text-[length:var(--text-title)] font-semibold tracking-tight text-ink">{job.role}</h3>
                   <p className="text-ink-2">
                     {job.company}, {job.location}
                   </p>
@@ -216,7 +210,7 @@ export default function Home() {
                 </ul>
                 <p className="text-sm text-muted">{job.stack.join(", ")}</p>
                 <p className="text-sm font-semibold">
-                  <Link href="/resume" className="link">
+                  <Link href="/resume" className="link tap">
                     Read the full resume
                   </Link>
                 </p>
